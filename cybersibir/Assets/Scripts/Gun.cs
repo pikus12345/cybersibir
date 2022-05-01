@@ -14,10 +14,6 @@ public class Gun : MonoBehaviour
     
     void FixedUpdate()
     {
-        Vector3 diff = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        float rotateZ = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        gun.rotation = Quaternion.Lerp(
-            gun.rotation, Quaternion.Euler(0, 0, rotateZ), Time.fixedDeltaTime*aimSpeed
-            );
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 }
