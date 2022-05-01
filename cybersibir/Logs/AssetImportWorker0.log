@@ -349,3 +349,4 @@ Received Import Request.
 Start importing Assets/Sprites/Idle.anim using Guid(bd470eee0de482f479dbfd08c9f45dce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e86fbb08e99c963bfbc5075790257003') in 0.001730 seconds 
   Import took 0.005048 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
