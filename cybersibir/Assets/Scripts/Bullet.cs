@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float moveSpeed;
+    public GameObject particlePrefab;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -16,5 +17,10 @@ public class Bullet : MonoBehaviour
         {
             rb.velocity = transform.right * Time.fixedDeltaTime * moveSpeed;
         }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Instantiate(particlePrefab, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }

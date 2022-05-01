@@ -55,19 +55,12 @@ SpriteAtlas:
   - {fileID: -9190288655428970878, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: 2894771460051042406, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: 6656882655687315948, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
-  - {fileID: -8110672050176293843, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -6233456244046297617, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: 7401945791725032824, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -2569119218762868166, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
-  - {fileID: 2275460861924357395, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: 1493945604572549994, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
-  - {fileID: -8869600432373449709, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
-  - {fileID: 954519924377424872, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
-  - {fileID: 8380971592997703152, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: 746220931467158104, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -1434482576141802195, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
-  - {fileID: -4859969556217927580, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
-  - {fileID: 3732286133765669254, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   m_PackedSpriteNamesToIndex:
   - building_8
   - building_9
@@ -75,19 +68,12 @@ SpriteAtlas:
   - building_7
   - building_4
   - building_5
-  - building_18
   - building_2
   - building_3
   - building_0
-  - building_15
   - building_1
-  - building_14
-  - building_17
-  - building_16
   - building_11
   - building_10
-  - building_13
-  - building_12
   m_RenderDataMap: {}
   m_Tag: building
   m_IsVariant: 0
