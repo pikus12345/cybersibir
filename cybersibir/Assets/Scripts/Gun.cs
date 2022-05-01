@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public Transform gun;
-    public float aimSpeed;
     void Start()
     {
         
     }
-
     
     void FixedUpdate()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 }
