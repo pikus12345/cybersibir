@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af85ee75ef1d1245bd57582e75a2b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4000
+  moveSpeed: 3000
   particlePrefab: {fileID: 8919505392809473748, guid: a5328d6c1e975734c95afeaacef2bcde, type: 3}
 --- !u!50 &5238389259391230702
 Rigidbody2D:
