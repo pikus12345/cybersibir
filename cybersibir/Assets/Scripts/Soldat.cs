@@ -41,7 +41,7 @@ public class Soldat : MonoBehaviour
             else
                 Go(-1);
             animator.SetInteger("Animation", 1);
-            //gun.position = transform.position;
+            //gun.position = transform.position + new Vector3(0, 10, 0);
         }
         else
             animator.SetInteger("Animation", 0);
@@ -64,10 +64,10 @@ public class Soldat : MonoBehaviour
     }
    public void Fire()
    {
+        gun.transform.position = player.position + new Vector3(0, 10, 0);
         if (delay > 1.5f)
         {
             animator.SetInteger("Animation", 2);
-            gun.transform.position = player.position;
             GameObject _bull = Instantiate(bulletPrefab, dulo.position, dulo.rotation);
             _bull.GetComponent<Bullet>().xSource = dulo.position.x;
             Instantiate(bulletParticlesPrefab, dulo.position, dulo.rotation);

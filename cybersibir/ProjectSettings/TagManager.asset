@@ -8,6 +8,11 @@ TagManager:
   - Bullet
   - Enemy
   - EnemyBullet
+  - Music
+  - SettingsManager
+  - SFXSlider
+  - MusicSlider
+  - FullscreenToggle
   layers:
   - Default
   - TransparentFX
