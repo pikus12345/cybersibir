@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DedEnemy : MonoBehaviour
+public class Soldat : MonoBehaviour
 {
     Animator animator;
     private bool isLiving = true;
     private Transform player;
     public float moveSpeed;
     public float viewRadius;
-    [SerializeField]private float distToPlayer;
+    [SerializeField] private float distToPlayer;
     public float attackDistance;
+    public Transform gun;
+    public GameObject bulletPrefab;
+    public GameObject bulletParticlesPrefab;
+    private float delay;
+    public Transform dulo;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -27,7 +32,7 @@ public class DedEnemy : MonoBehaviour
         distToPlayer = Vector2.Distance(player.position, transform.position);
         if (distToPlayer < attackDistance)
         {
-            Punch();
+            Fire();
         }
         else if (distToPlayer < viewRadius)
         {
@@ -36,15 +41,17 @@ public class DedEnemy : MonoBehaviour
             else
                 Go(-1);
             animator.SetInteger("Animation", 1);
+            //gun.position = transform.position;
         }
         else
             animator.SetInteger("Animation", 0);
+            //gun.position = transform.position;
     }
     private void Go(float hor)
     {
         transform.Translate(Mathf.Abs(hor) * Time.deltaTime * moveSpeed, 0, 0);
         if (hor < 0)
-            transform.rotation = Quaternion.Euler(0,180,0);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         else
             transform.rotation = Quaternion.Euler(0, 0, 0);
     }
@@ -55,18 +62,20 @@ public class DedEnemy : MonoBehaviour
             Death();
         }
     }
-    public void Punch()
-    {
-        animator.SetInteger("Animation", 2);
-        Debug.Log("Punch!");
-    }
-    public void Hurt()
-    {
-        if (distToPlayer < attackDistance)
+   public void Fire()
+   {
+        if (delay > 1.5f)
         {
-            player.GetComponent<PlayerLife>().Death(transform.position.x);
+            animator.SetInteger("Animation", 2);
+            gun.transform.position = player.position;
+            GameObject _bull = Instantiate(bulletPrefab, dulo.position, dulo.rotation);
+            _bull.GetComponent<Bullet>().xSource = dulo.position.x;
+            Instantiate(bulletParticlesPrefab, dulo.position, dulo.rotation);
+            delay = 0;
         }
-    }
+        delay += Time.deltaTime;
+        
+   }
     public void Death()
     {
         isLiving = false;

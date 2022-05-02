@@ -5,8 +5,26 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour
 {
     
-    public void Death()
+    public void Death(float xSource)
     {
+        if (Input.GetMouseButton(1))
+        {
+            if (transform.rotation.eulerAngles.y == 0 & transform.position.x < xSource)
+            {
+                Block();
+                return;
+            }
+            if (transform.rotation.eulerAngles.y == 180 & transform.position.x > xSource)
+            {
+                Block();
+                return;
+            }
+        }
         Camera.main.GetComponent<GameManager>().ReloadScene();
+    }
+    public void Block()
+    {
+        //play sound
+        Debug.Log("Block");
     }
 }

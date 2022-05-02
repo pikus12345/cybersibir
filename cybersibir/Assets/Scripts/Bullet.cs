@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb;
     public float moveSpeed;
     public GameObject particlePrefab;
+    public float xSource;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

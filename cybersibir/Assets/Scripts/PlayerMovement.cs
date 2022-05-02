@@ -22,13 +22,27 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        Gun gun = FindObjectOfType<Gun>();
+        if (Input.GetMouseButton(1))
+        {
+            animator.SetInteger("Animation", 4);
+            speed = 0;
+            gun.block = true;
+            return;
+            //ÁËÎÊÈÐÓÅÒ ÎÑÒÀËÜÍÎÅ ÄÂÈÆÅÍÈÅ
+        }
+        else
+            gun.block = false;
+
         if (Input.GetKey(KeyCode.LeftShift))
             speed = movespeed * 65;
         else
             speed = movespeed * 50;
         if (hor > 0)
+            //right
             transform.rotation = Quaternion.Euler(0, 0, 0);
         else if (hor < 0)
+            //left
             transform.rotation = Quaternion.Euler(0, 180, 0);
         if (canJump)
         {
@@ -73,6 +87,13 @@ public class PlayerMovement : MonoBehaviour
     {
         hor = Input.GetAxisRaw("Horizontal");
         transform.Translate(speed*Time.fixedDeltaTime/1000*Mathf.Abs(hor),0,0);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("EnemyBullet"))
+        {
+            GetComponent<PlayerLife>().Death(collision.collider.GetComponent<Bullet>().xSource);
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {

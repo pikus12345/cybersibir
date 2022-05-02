@@ -39,6 +39,6 @@ public class Shoot : MonoBehaviour
         pistolSlide.Translate(-0.2f,0,0);
 
         gun.offset += (-(Vector2)gun.transform.right) / 2 + (-(Vector2)gun.transform.up) / 2;
-        
+
     }
 }
