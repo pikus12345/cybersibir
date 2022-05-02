@@ -20,6 +20,10 @@ public class LevelManager : MonoBehaviour
     public Image levelImage;
     public Text levelTitle;
     public Text levelDescription;
+    [SerializeField]public GameObject closedLevel;
+    public Text numberText;
+
+    public static List<string> openedLevels = new List<string>();
 
     public Button start;
 
@@ -38,10 +42,33 @@ public class LevelManager : MonoBehaviour
             left.interactable = false;
         else
             left.interactable = true;
-
-        levelImage.sprite = levelList[selectedLevel].levelImage;
+        numberText.text = string.Format("{0}/{1}", selectedLevel+1, levelList.Count);
+        
         levelTitle.text = levelList[selectedLevel].levelTitle;
-        levelDescription.text = levelList[selectedLevel].levelDescription;
+        levelImage.sprite = levelList[selectedLevel].levelImage;
+        bool isOpened = false;
+        foreach(string level in openedLevels)
+        {
+            if (level.Equals(levelList[selectedLevel].levelName))
+            {
+                isOpened = true;
+                break;
+            }
+        }
+        if (!isOpened & selectedLevel != 0)
+        {
+            levelDescription.text = "???";
+            levelImage.color = Color.grey;
+            closedLevel.SetActive(true);
+            start.interactable = false;
+        }
+        else
+        {
+            levelDescription.text = levelList[selectedLevel].levelDescription;
+            levelImage.color = Color.white;
+            closedLevel.SetActive(false);
+            start.interactable = true;
+        }
     }
     public void NextLevel(int i)
     {
@@ -66,6 +93,10 @@ public class LevelManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+    public static void setOpened(string name)
+    {
+        openedLevels.Add(name);
     }
 }
 
