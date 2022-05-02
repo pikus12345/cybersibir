@@ -32,11 +32,11 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 180, 0);
         if (canJump)
         {
-            if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.LeftControl) & hor != 0 & Input.GetKey(KeyCode.LeftShift))
+            if ((Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.LeftControl)) & hor != 0 & Input.GetKey(KeyCode.LeftShift))
             {
                 rb.AddForce(transform.right * slideForce);
             }
-            if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl) & hor != 0 & Input.GetKey(KeyCode.LeftShift))
+            if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) & hor != 0 & Input.GetKey(KeyCode.LeftShift))
             {
                 //SLIDE
                 animator.SetInteger("Animation", 3);
