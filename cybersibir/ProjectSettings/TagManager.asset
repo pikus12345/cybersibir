@@ -13,6 +13,7 @@ TagManager:
   - SFXSlider
   - MusicSlider
   - FullscreenToggle
+  - LevelEnd
   layers:
   - Default
   - TransparentFX

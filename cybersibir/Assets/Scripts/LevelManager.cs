@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using System;
+using System.IO;
 [System.Serializable]
 public class Level
 {
@@ -31,6 +32,13 @@ public class LevelManager : MonoBehaviour
 
     private int selectedLevel;
 
+    public static string savePath;
+
+    private void Start()
+    {
+        savePath = Path.Combine(Application.dataPath, "levels.json");
+        openedLevels = getOpenedLevels();
+    }
     private void Update()
     {
         if (selectedLevel == levelList.Count-1)
@@ -55,7 +63,7 @@ public class LevelManager : MonoBehaviour
                 break;
             }
         }
-        if (!isOpened & selectedLevel != 0)
+        if (!isOpened & selectedLevel != 0 & selectedLevel != 1)
         {
             levelDescription.text = "???";
             levelImage.color = Color.grey;
@@ -97,6 +105,27 @@ public class LevelManager : MonoBehaviour
     public static void setOpened(string name)
     {
         openedLevels.Add(name);
+        saveOpenedLevels(openedLevels);
     }
+    public static List<string> getOpenedLevels()
+    {
+        if (!File.Exists(savePath))
+        {
+            List<string> levels = new List<string>() {"Training", "Level1"};
+            saveOpenedLevels(levels);
+        }
+        return JsonUtility.FromJson<SaveData>(File.ReadAllText(savePath)).openedLevels;
+    }
+    public static void saveOpenedLevels(List<string> saveLevels)
+    {
+        SaveData sv = new SaveData();
+        sv.openedLevels = saveLevels;
+        File.WriteAllText(savePath, JsonUtility.ToJson(sv));
+    }
+}
+[Serializable]
+public class SaveData
+{
+    public List<string> openedLevels;
 }
 

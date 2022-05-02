@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class MusicManager : MonoBehaviour
 {
+    public AudioMixer audioMixer;
+
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -20,5 +23,10 @@ public class MusicManager : MonoBehaviour
                 }
             }
         }
+        settingsData data = SettingsManager.getSettings();
+        audioMixer.SetFloat("SFXVolume", data.sfx);
+        audioMixer.SetFloat("MusicVolume", data.music);
+
     }
+
 }

@@ -3,80 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.IO;
 
 public class SettingsManager : MonoBehaviour
 {
-    public Slider SFXSlider;
-    public Slider MusicSlider;
-    public Toggle FullscreenToggle;
+    [SerializeField] Slider SFXSlider;
+    [SerializeField] Slider MusicSlider;
+    [SerializeField] Toggle FullscreenToggle;
 
-    public static float SFX;
-    public static float Music;
-    public static bool fullscreen;
 
     public AudioMixer audioMixer;
+
+    public static string path;
+
     private void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        
+        settingsData data = getSettings();
+        FullscreenToggle.isOn = data.fullscreen;
+        MusicSlider.value = data.music;
+        SFXSlider.value = data.sfx;
     }
-    private void OnSceneLoad()
+    public void RefreshData()
     {
-        //do something
+        
     }
-    
-    private void Update()
+    public void saveSettings()
     {
-        if (GameObject.FindGameObjectsWithTag("SettingsManager").Length > 1)
-        {
-            foreach (GameObject obj in GameObject.FindGameObjectsWithTag("SettingsManager"))
-            {
-                if (obj != gameObject)
-                {
-                    Destroy(obj);
-                }
-            }
-        }
-        try
-        { Find(); RefreshAndSave(); }
-        catch { }
+        settingsData data = new settingsData();
+        data.sfx = SFXSlider.value;
+        data.music = MusicSlider.value;
+        data.fullscreen = FullscreenToggle.isOn;
+        File.WriteAllText(path, JsonUtility.ToJson(data));
     }
-    public void Find()
+    public static settingsData getSettings()
     {
-        SFXSlider = GameObject.FindGameObjectWithTag("SFXSlider").GetComponent<Slider>();
-        MusicSlider = GameObject.FindGameObjectWithTag("MusicSlider").GetComponent<Slider>();
-        FullscreenToggle = GameObject.FindGameObjectWithTag("FullscreenToggle").GetComponent<Toggle>();
+        return JsonUtility.FromJson<settingsData>(File.ReadAllText(path));
     }
-    public void RefreshAndSave()
-    {
-        SFX = SFXSlider.value;
-        Music = MusicSlider.value;
-        fullscreen = FullscreenToggle.isOn;
 
-        PlayerPrefs.SetFloat("SFX", SFX);
-        PlayerPrefs.SetFloat("Music", Music);
-        if(fullscreen)
-            PlayerPrefs.SetInt("Fullscreen", 0);
-        else
-            PlayerPrefs.SetInt("Fullscreen", 1);
-        SetValues();
-    }
-    public void Load()
-    {
-        SFX = PlayerPrefs.GetFloat("SFX", 0);
-        Music = PlayerPrefs.GetFloat("Music", 0);
-        if (PlayerPrefs.GetInt("Fullscreen", 0) == 0)
-            fullscreen = false;
-        else
-            fullscreen = true;
-        SetValues();
-    }
-    public void SetValues()
-    {
-        SFXSlider.value = SFX;
-        audioMixer.SetFloat("SFXVolume", SFX);
-        MusicSlider.value = Music;
-        audioMixer.SetFloat("MusicVolume", Music);
-        FullscreenToggle.isOn = fullscreen;
-        Screen.fullScreen = fullscreen;
-    }
+}
+public class settingsData
+{
+    public float sfx;
+    public float music;
+    public bool fullscreen;
 }

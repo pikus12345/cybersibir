@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-    
+
+    private void Update()
+    {
+        if (transform.position.y < -30)
+            Death();
+    }
     public void Death(float xSource)
     {
         if (Input.GetMouseButton(1))
@@ -22,9 +27,21 @@ public class PlayerLife : MonoBehaviour
         }
         Camera.main.GetComponent<GameManager>().ReloadScene();
     }
+    public void Death()
+    {
+        Camera.main.GetComponent<GameManager>().ReloadScene();
+    }
     public void Block()
     {
         //play sound
         Debug.Log("Block");
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.attachedRigidbody.CompareTag("LevelEnd"))
+        {
+            FindObjectOfType<GameManager>().EndLevel();
+        }
+    }
+
 }

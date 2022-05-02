@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 112951268}
   m_Layer: 5
   m_Name: Toggle
-  m_TagString: FullscreenToggle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,9 +399,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2005763059}
         m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
-        m_MethodName: RefreshAndSave
+        m_MethodName: RefreshData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -773,7 +773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c3e11fe680c4354d9f8096e97513017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 0}
   isMenu: 1
 --- !u!1 &683582279
 GameObject:
@@ -786,8 +785,8 @@ GameObject:
   - component: {fileID: 683582280}
   - component: {fileID: 683582281}
   m_Layer: 5
-  m_Name: Slider
-  m_TagString: MusicSlider
+  m_Name: MusicSlider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -858,16 +857,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 1299706019}
   m_HandleRect: {fileID: 1117866964}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 0
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: -4.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2005763059}
         m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
-        m_MethodName: RefreshAndSave
+        m_MethodName: RefreshData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1113,6 +1112,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2005763059}
+        m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
+        m_MethodName: saveSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 545830749}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: LoadScene
@@ -1158,7 +1169,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041D\u0430\u0437\u0430\u0434"
+  m_Text: "\u041F\u0440\u0438\u043D\u044F\u0442\u044C"
 --- !u!222 &1095454580
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1693,8 +1704,8 @@ GameObject:
   - component: {fileID: 1575049912}
   - component: {fileID: 1575049913}
   m_Layer: 5
-  m_Name: Slider
-  m_TagString: SFXSlider
+  m_Name: SFXSlider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1765,16 +1776,16 @@ MonoBehaviour:
   m_FillRect: {fileID: 1552229688}
   m_HandleRect: {fileID: 87093030}
   m_Direction: 0
-  m_MinValue: -20
-  m_MaxValue: 0
+  m_MinValue: -80
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2005763059}
         m_TargetAssemblyTypeName: SettingsManager, Assembly-CSharp
-        m_MethodName: RefreshAndSave
+        m_MethodName: RefreshData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2015,6 +2026,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978922244}
   m_CullTransparentMesh: 1
+--- !u!1 &2005763057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2005763058}
+  - component: {fileID: 2005763059}
+  m_Layer: 0
+  m_Name: SettingsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2005763058
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005763057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.49234393, y: 9.553465, z: -161.90164}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2005763059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005763057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bfe7e4fc73e4149a8c6f74110fe70c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFXSlider: {fileID: 1575049913}
+  MusicSlider: {fileID: 683582281}
+  FullscreenToggle: {fileID: 112951268}
+  audioMixer: {fileID: 24100000, guid: b2e12febb25a9ff4fb408879a3f24a70, type: 2}
 --- !u!1 &2037559413
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject loadingScreen;
     public bool isMenu;
-
+    private void Start()
+    {
+        SettingsManager.path = Path.Combine(Application.dataPath, "settings.json");
+        Screen.fullScreen = SettingsManager.getSettings().fullscreen;
+    }
 
     public void ReloadScene()
     {
@@ -25,4 +29,12 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
+    public void EndLevel()
+    {
+        LevelManager.setOpened("Level"+(int.Parse(SceneManager.GetActiveScene().name.Substring(5))+1));
+        LoadScene("LevelSelect");
+    }
+    
+
+
 }
