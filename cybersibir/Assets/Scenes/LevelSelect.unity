@@ -814,7 +814,7 @@ MonoBehaviour:
   - levelTitle: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
     levelDescription: "\u042F \u0442\u0435\u0431\u0435 \u043F\u043E\u043C\u043E\u0433\u0443"
     levelImage: {fileID: 21300000, guid: b10cf853613aa1c4290c9fb3c6a09485, type: 3}
-    levelName: Training
+    levelName: Level0
   - levelTitle: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 1"
     levelDescription: "\u041F\u0435\u0440\u0432\u044B\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C.
       \u0412 \u043C\u0438\u0440\u0435 \u0432\u0441\u0451 \u0442\u0430\u043A \u043F\u0440\u043E\u0441\u0442\u043E."
