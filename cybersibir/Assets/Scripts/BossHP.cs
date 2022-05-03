@@ -5,7 +5,7 @@ using UnityEngine;
 public class BossHP : MonoBehaviour
 {
     public int hp;
-
+    public bool rightSpawn;
     public List<GameObject> bolvanchiks;
     public GameObject bolvanchikPrefab;
     public GameObject boomPrefab;
@@ -36,10 +36,15 @@ public class BossHP : MonoBehaviour
     }
     private void SpawnBolvanchics()
     {
+        int b;
+        if (rightSpawn)
+            b = 1;
+        else
+            b = -1;
         for(int i = 1; i <= 3; i++)
         {
             GameObject bolvan = Instantiate(bolvanchikPrefab, transform.position, Quaternion.identity);
-            bolvan.transform.position += new Vector3(-i*2,0,0);
+            bolvan.transform.position += new Vector3(b*i*2,0,0);
             bolvanchiks.Add(bolvan);
         }
     }

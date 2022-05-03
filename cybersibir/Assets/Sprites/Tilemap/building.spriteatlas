@@ -48,11 +48,25 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
     - {fileID: 2800000, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
     - {fileID: 2800000, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+    - {fileID: 2800000, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: -3120235851655540928, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: -3514323661035511513, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: -3607356432403043281, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: 7202533319848863053, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: 670465804713597845, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: 1687977934941291287, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: 2852610726315664299, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: -5199083151792348287, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: -5614248818816647809, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: 7883150905138521882, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: -2926414249993182927, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: 5340703965763632610, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: -5112711567675332642, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
   - {fileID: -3062486835590830950, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -7471712248444111868, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -353946654998929424, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
@@ -118,6 +132,19 @@ SpriteAtlas:
   - {fileID: -8289413824586459334, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
   - {fileID: 1881874938338915150, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
   m_PackedSpriteNamesToIndex:
+  - club_6
+  - club_7
+  - club_4
+  - club_5
+  - club_2
+  - club_3
+  - club_0
+  - club_1
+  - club_8
+  - club_9
+  - club_11
+  - club_10
+  - club_12
   - building_8
   - building_9
   - building_6
