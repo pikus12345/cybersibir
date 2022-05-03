@@ -40,7 +40,7 @@ public class Shoot : MonoBehaviour
         if (delay > 0.2f)
         {
             GetComponent<AudioSource>().PlayOneShot(gunShot);
-            Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+            Instantiate(bulletPrefab, bulletSpawn.position+new Vector3(0,0,-10), bulletSpawn.rotation);
             Instantiate(gunShotPrefab, bulletSpawn);
             pistolSlide.Translate(-0.2f, 0, 0);
 

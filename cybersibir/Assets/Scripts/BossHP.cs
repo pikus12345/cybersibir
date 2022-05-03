@@ -20,7 +20,6 @@ public class BossHP : MonoBehaviour
         
         if (hp % 5 == 0)
         {
-            
             if (bolvanchiks.Count == 0)
                 SpawnBolvanchics();
             if (bolvanchiks.Count > 0)
@@ -33,6 +32,7 @@ public class BossHP : MonoBehaviour
 
         if (hp <= 0)
             Death();
+
     }
     private void SpawnBolvanchics()
     {
@@ -57,7 +57,7 @@ public class BossHP : MonoBehaviour
     }
     public void Death()
     {
-        Instantiate(boomPrefab, transform.position, Quaternion.identity);
+        Instantiate(boomPrefab, transform.position+new Vector3(0,0,-10), Quaternion.identity);
         Destroy(gameObject);
     }
 }

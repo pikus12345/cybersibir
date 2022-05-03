@@ -35,9 +35,16 @@ public class PlayerMovement : MonoBehaviour
             gun.block = false;
 
         if (Input.GetKey(KeyCode.LeftShift))
-            speed = movespeed * 65;
+        {
+            speed = movespeed * 75;
+            animator.SetFloat("Speed", 1.2f);
+        }
         else
+        {
             speed = movespeed * 50;
+            animator.SetFloat("Speed", 1);
+        }
+            
         if (hor > 0)
             //right
             transform.rotation = Quaternion.Euler(0, 0, 0);

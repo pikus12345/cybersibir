@@ -68,7 +68,7 @@ public class Soldat : MonoBehaviour
         if (delay > 0.5f)
         {
             animator.SetInteger("Animation", 2);
-            GameObject _bull = Instantiate(bulletPrefab, dulo.position, dulo.rotation);
+            GameObject _bull = Instantiate(bulletPrefab, dulo.position + new Vector3(0, 0, -10), dulo.rotation);
             _bull.GetComponent<Bullet>().xSource = dulo.position.x;
             Instantiate(bulletParticlesPrefab, dulo.position, dulo.rotation);
             delay = 0;
