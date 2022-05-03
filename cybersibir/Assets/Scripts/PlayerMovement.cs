@@ -13,12 +13,15 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     public float slideForce;
     private CapsuleCollider2D capsuleCollider;
+    private AudioSource audioSource;
+    public AudioClip slideSound;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         capsuleCollider = GetComponent<CapsuleCollider2D>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -55,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if ((Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.LeftControl)) & hor != 0 & Input.GetKey(KeyCode.LeftShift))
             {
+                audioSource.PlayOneShot(slideSound);
                 rb.AddForce(transform.right * slideForce);
             }
             if ((Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.LeftControl)) & hor != 0 & Input.GetKey(KeyCode.LeftShift))
@@ -91,7 +95,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         hor = Input.GetAxisRaw("Horizontal");
-        transform.Translate(speed*Time.fixedDeltaTime/1000*Mathf.Abs(hor),0,0);
+        if (!Input.GetKey(KeyCode.C) & !Input.GetKey(KeyCode.LeftControl))
+        {
+            transform.Translate(speed * Time.fixedDeltaTime / 1000 * Mathf.Abs(hor), 0, 0);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

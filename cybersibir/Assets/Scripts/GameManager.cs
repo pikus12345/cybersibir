@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
         LoadScene("LevelSelect");
     }
     
-
+    public void OpenURL(string url)
+    {
+        Application.OpenURL(url);
+    }
 
 }
