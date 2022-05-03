@@ -463,7 +463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d8c1ecef4a9b4934da3ec017c5c6c707, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b10cf853613aa1c4290c9fb3c6a09485, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 67dec8b4fb79f9c42a7f8e7bd018b938, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 74fe89c15aecd8e438f2f721e3f01bc3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -767,8 +767,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1644969529}
-  - component: {fileID: 1644969528}
   - component: {fileID: 1644969530}
+  - component: {fileID: 1644969528}
   m_Layer: 0
   m_Name: Music
   m_TagString: Music
@@ -786,7 +786,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2724097729446783886, guid: b2e12febb25a9ff4fb408879a3f24a70, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 6cd0e7a9b7a2e7a43bc137a22f22439f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -899,6 +899,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: b2e12febb25a9ff4fb408879a3f24a70, type: 2}
+  audioSource: {fileID: 1644969528}
+  clips:
+  - {fileID: 8300000, guid: 6cd0e7a9b7a2e7a43bc137a22f22439f, type: 3}
+  - {fileID: 8300000, guid: be200f7d91dea354a9c7f8b7741c283b, type: 3}
+  - {fileID: 8300000, guid: 9d99153bf50ec2444ab9f3a47692de9a, type: 3}
+  - {fileID: 8300000, guid: b5c6cea4b0037934b8900339dc353291, type: 3}
+  isInGame: 0
 --- !u!1 &1695760247
 GameObject:
   m_ObjectHideFlags: 0

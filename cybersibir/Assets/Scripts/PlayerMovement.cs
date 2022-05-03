@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
                 capsuleCollider.size = new Vector2(0.9f, 0.16f);
                 capsuleCollider.direction = CapsuleDirection2D.Horizontal;
                 speed = 0;
+                canJump = false;
             }
             else
             {
@@ -72,16 +73,13 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetInteger("Animation", 0);
             }
         }
-        else
-        {
-            //JUMP
-            animator.SetInteger("Animation", 2);
-        }
-        
+        //JUMP
         if (Input.GetKeyDown(KeyCode.Space) & canJump)
-        {
-            rb.AddForce(new Vector2(0, jumpForce * 1000));
-        }
+           rb.AddForce(new Vector2(0, jumpForce * 1000));
+        if(!canJump & speed != 0)
+            animator.SetInteger("Animation", 2);
+
+
     }
     private void FixedUpdate()
     {

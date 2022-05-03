@@ -258,8 +258,8 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 65078fb99717a844894468b7604aae7c, type: 3}
     m_FontSize: 23
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
+    m_BestFit: 1
+    m_MinSize: 12
     m_MaxSize: 113
     m_Alignment: 0
     m_AlignByGeometry: 1
@@ -268,7 +268,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\u0412\u0437\u043E\u0440\u0432\u0430\u0442\u044C \u0432\u0441\u0435\u0445
-    \u043D\u0430 \u0431\u0430\u0437\u0435 \u0431\u0435\u0431\u0440"
+    \u043D\u0430 \u0431\u0430\u0437\u0435 \u0431\u0435\u0431\u0440 \u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443\u0431\u0443"
 --- !u!222 &338927548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -812,33 +812,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelList:
   - levelTitle: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
-    levelDescription: "\u042F \u0442\u0435\u0431\u0435 \u043F\u043E\u043C\u043E\u0433\u0443"
-    levelImage: {fileID: 21300000, guid: b10cf853613aa1c4290c9fb3c6a09485, type: 3}
+    levelDescription: "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439 \u0441\u0435\u0431\u044F
+      \u0441 \u0434\u0435\u0434\u0430\u043C\u0438."
+    levelImage: {fileID: 21300000, guid: 024e61b38371f164da029c3592ac2db3, type: 3}
     levelName: Level0
   - levelTitle: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 1"
-    levelDescription: "\u041F\u0435\u0440\u0432\u044B\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C.
-      \u0412 \u043C\u0438\u0440\u0435 \u0432\u0441\u0451 \u0442\u0430\u043A \u043F\u0440\u043E\u0441\u0442\u043E."
-    levelImage: {fileID: 21300000, guid: 1a4ba689e1bd325499658a981eac41ad, type: 3}
+    levelDescription: "\u042F, \u0420\u0430\u0438\u043B\u044C \u0413\u043E\u043B\u044C\u0446\u043C\u0430\u043D,
+      \u0437\u0430\u043C\u043E\u0447\u0443 \u0432\u0441\u0435\u0445, \u043A\u0442\u043E
+      \u043F\u043E\u043C\u0435\u0448\u0430\u0435\u0442 \u043C\u043D\u0435 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u044C
+      \u043F\u0440\u0430\u0432\u0438\u0442\u0435\u043B\u0435\u0439 \u043C\u0438\u0440\u043E\u043C."
+    levelImage: {fileID: 21300000, guid: b921972327c2ff148978ab740443df18, type: 3}
     levelName: Level1
   - levelTitle: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 2"
-    levelDescription: "\u0412\u0442\u043E\u0440\u043E\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C.
-      \u0412 \u043C\u0438\u0440\u0435 \u043D\u0435 \u0432\u0441\u0451 \u0442\u0430\u043A
-      \u043F\u0440\u043E\u0441\u0442\u043E."
-    levelImage: {fileID: 21300000, guid: 77adc2817b7930842865259736734249, type: 3}
+    levelDescription: "\u042F \u043F\u043E\u0434\u043E\u0448\u0451\u043B \u043A \u041A\u0443\u043F\u043B\u0438\u043D\u043E\u0432\u0443.
+      \u041E\u0441\u0442\u0430\u043B\u043E\u0441\u044C \u0435\u0433\u043E \u0437\u0430\u043C\u043E\u0447\u0438\u0442\u044C."
+    levelImage: {fileID: 21300000, guid: 8c1e8a47127ca464e81c90bec88e7843, type: 3}
     levelName: Level2
   - levelTitle: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 3"
-    levelDescription: "\u0422\u0440\u0435\u0442\u0438\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C.
-      \u0416\u0438\u0437\u043D\u044C - \u0431\u043E\u043B\u044C."
-    levelImage: {fileID: 21300000, guid: 77adc2817b7930842865259736734249, type: 3}
+    levelDescription: "\u041A\u043E\u0432\u0430\u043B\u044C \u043F\u043E\u043F\u043B\u0430\u0442\u0438\u0442\u0441\u044F
+      \u0437\u0430 \u0441\u0432\u043E\u0438 \u0433\u0440\u0435\u0445\u0438. "
+    levelImage: {fileID: 21300000, guid: f4c86156278b06d41a221463ea51a3bf, type: 3}
     levelName: Level3
   - levelTitle: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 4"
-    levelDescription: "\u041C\u043D\u0435 \u0442\u044F\u0436\u0435\u043B\u043E"
+    levelDescription: "\u041F\u043E\u0440\u0430 \u0438\u0437\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u044C
+      (\u043F\u0440\u0438\u043C\u043E) \u0412\u0438\u043A\u0442\u043E\u0440\u0438\u044E!"
     levelImage: {fileID: 21300000, guid: f5973720ba2890140bfb60cbf314075e, type: 3}
     levelName: Level4
   - levelTitle: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 5"
-    levelDescription: "\u041F\u041E\u041B\u041D\u042B\u0419 \u041F\u0418\u0417\u0414\u0415\u0426
-      \u041D\u0410\u0425\u0423\u0419"
+    levelDescription: "\u0410\u043D\u0434\u0440\u044E\u0445\u0430. \u0422\u044B \u0449\u044F\u0441
+      \u0441\u0434\u043E\u0445\u043D\u0435\u0448\u044C."
     levelImage: {fileID: -5109818577505360569, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+    levelName: Level5
+  - levelTitle: "\u0423\u0440\u043E\u0432\u0435\u043D\u044C 6"
+    levelDescription: "\u0410\u043D\u043E\u043D\u0438\u043C\u0443\u0441. \u0420\u043E\u0434\u0438\u043D\u0430
+      - \u041A\u0440\u0430\u0441\u043D\u043E\u044F\u0440\u043E\u0441\u0442\u044C.
+      \u0415\u043C\u0443 \u043A\u043E\u043D\u0435\u0446."
+    levelImage: {fileID: 21300000, guid: 74fe89c15aecd8e438f2f721e3f01bc3, type: 3}
     levelName: Level5
   levelImage: {fileID: 1034661452}
   levelTitle: {fileID: 499026273}

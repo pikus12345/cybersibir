@@ -44,6 +44,10 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
+    - {fileID: 2800000, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+    - {fileID: 2800000, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+    - {fileID: 2800000, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+    - {fileID: 2800000, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -61,6 +65,58 @@ SpriteAtlas:
   - {fileID: 1493945604572549994, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: 746220931467158104, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -1434482576141802195, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
+  - {fileID: -6270168389146395150, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: -6963583133150348316, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: 4416261284227410994, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: 7704874355256101881, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: -4851936499946679492, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: 5803690907504904858, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: -8316972594459241859, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: 6628814704625544358, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: -2462329946134876555, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: 7044879360315008532, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: -7572369861537676212, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: -8173194679725562175, guid: 8d619c6bc9b56cb4698db1186656a739, type: 3}
+  - {fileID: -7261739215782251913, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 5881648096923564521, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 5259533502514621800, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 3780983238949544047, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 4393923433144283853, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: -4102511409672271985, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 6013467819192171953, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 2193574325425964026, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: -5884555079340466006, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 4332745317960410926, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: -3852067852039865196, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: 3191902477189633444, guid: 1d69815cc338ced42a34a6c30f91415a, type: 3}
+  - {fileID: -6305492505211837727, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 6539746089192941403, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 5113305516112643439, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: -8689035635190686027, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 6158802113039044628, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: -5693590246162419906, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 5618000101936168721, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: -5369452329608476640, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: -7340963149319210717, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: -2011216184659823745, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 6247274585842468122, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 3786519898515604688, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 5455203826815307459, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: -427282983072032294, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 2119963344433259550, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: -5109818577505360569, guid: 05c176cc9ee80a34e8d2966865ab84d8, type: 3}
+  - {fileID: 6885026208745179111, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: 645122151158739067, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: 4451937822333640515, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: 8765109007207583073, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: -8184054137963624781, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: -7207453625890080507, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: -5138162113435866600, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: -63570895187406317, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: 4738900859730501900, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: 8971250562100070772, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: -8289413824586459334, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
+  - {fileID: 1881874938338915150, guid: a8b3b26edc216a640b38b93a795a91c3, type: 3}
   m_PackedSpriteNamesToIndex:
   - building_8
   - building_9
@@ -74,6 +130,58 @@ SpriteAtlas:
   - building_1
   - building_11
   - building_10
+  - building_red_11
+  - building_red_10
+  - building_red_8
+  - building_red_9
+  - building_red_6
+  - building_red_7
+  - building_red_4
+  - building_red_5
+  - building_red_2
+  - building_red_3
+  - building_red_0
+  - building_red_1
+  - building_blue_10
+  - building_blue_11
+  - building_blue_9
+  - building_blue_8
+  - building_blue_3
+  - building_blue_2
+  - building_blue_1
+  - building_blue_0
+  - building_blue_7
+  - building_blue_6
+  - building_blue_5
+  - building_blue_4
+  - props_8
+  - props_9
+  - props_2
+  - props_3
+  - props_0
+  - props_1
+  - props_6
+  - props_7
+  - props_4
+  - props_5
+  - props_11
+  - props_10
+  - props_13
+  - props_12
+  - props_15
+  - props_14
+  - building_purple_10
+  - building_purple_11
+  - building_purple_9
+  - building_purple_8
+  - building_purple_1
+  - building_purple_0
+  - building_purple_3
+  - building_purple_2
+  - building_purple_5
+  - building_purple_4
+  - building_purple_7
+  - building_purple_6
   m_RenderDataMap: {}
   m_Tag: building
   m_IsVariant: 0

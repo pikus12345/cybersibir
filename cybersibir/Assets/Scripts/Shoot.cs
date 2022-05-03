@@ -10,6 +10,8 @@ public class Shoot : MonoBehaviour
     private Vector3 pistolNormalLocalPos;
     Gun gun;
     public GameObject gunShotPrefab;
+    private float delay;
+    public AudioClip gunShot;
 
     private void Start()
     {
@@ -18,6 +20,7 @@ public class Shoot : MonoBehaviour
     }
     private void Update()
     {
+        delay += Time.deltaTime;
         if (Input.GetMouseButtonDown(0))
         {
             Shot();
@@ -34,11 +37,15 @@ public class Shoot : MonoBehaviour
     }
     public void Shot()
     {
-        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-        Instantiate(gunShotPrefab, bulletSpawn);
-        pistolSlide.Translate(-0.2f,0,0);
+        if (delay > 0.2f)
+        {
+            GetComponent<AudioSource>().PlayOneShot(gunShot);
+            Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+            Instantiate(gunShotPrefab, bulletSpawn);
+            pistolSlide.Translate(-0.2f, 0, 0);
 
-        gun.offset += (-(Vector2)gun.transform.right) / 2 + (-(Vector2)gun.transform.up) / 2;
-
+            gun.offset += (-(Vector2)gun.transform.right) / 2 + (-(Vector2)gun.transform.up) / 2;
+            delay = 0;
+        }
     }
 }

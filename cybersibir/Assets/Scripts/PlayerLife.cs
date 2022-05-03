@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour
 {
-
+    public static bool isInBossZone;
     private void Update()
     {
         if (transform.position.y < -30)
@@ -41,6 +41,17 @@ public class PlayerLife : MonoBehaviour
         if (collision.attachedRigidbody.CompareTag("LevelEnd"))
         {
             FindObjectOfType<GameManager>().EndLevel();
+        }
+        if (collision.attachedRigidbody.CompareTag("BossZone"))
+        {
+            isInBossZone = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.attachedRigidbody.CompareTag("BossZone"))
+        {
+            isInBossZone = false;
         }
     }
 

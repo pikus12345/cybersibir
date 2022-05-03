@@ -14,6 +14,6 @@ public class PlayerCamera : MonoBehaviour
     private void FixedUpdate()
     {
         vec = Vector3.Lerp(target.position, Camera.main.ScreenToWorldPoint(Input.mousePosition), Time.fixedDeltaTime * coefficent);
-        transform.position = vec + new Vector3(0,0,-10);
+        transform.position = vec + new Vector3(0,2.5f,-10);
     }
 }

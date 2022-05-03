@@ -104,11 +104,13 @@ public class LevelManager : MonoBehaviour
     }
     public static void setOpened(string name)
     {
+        openedLevels = getOpenedLevels();
         openedLevels.Add(name);
         saveOpenedLevels(openedLevels);
     }
     public static List<string> getOpenedLevels()
     {
+        savePath = Path.Combine(Application.dataPath, "levels.json");
         if (!File.Exists(savePath))
         {
             List<string> levels = new List<string>() {"Training", "Level1"};
@@ -120,6 +122,7 @@ public class LevelManager : MonoBehaviour
     {
         SaveData sv = new SaveData();
         sv.openedLevels = saveLevels;
+        savePath = Path.Combine(Application.dataPath, "levels.json");
         File.WriteAllText(savePath, JsonUtility.ToJson(sv));
     }
 }

@@ -65,7 +65,7 @@ public class Soldat : MonoBehaviour
    public void Fire()
    {
         gun.transform.position = player.position + new Vector3(0, 10, 0);
-        if (delay > 1.5f)
+        if (delay > 0.5f)
         {
             animator.SetInteger("Animation", 2);
             GameObject _bull = Instantiate(bulletPrefab, dulo.position, dulo.rotation);

@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb;
     public float moveSpeed;
     public GameObject particlePrefab;
+    public GameObject bloodSplash;
+
     public float xSource;
     private void Start()
     {
@@ -21,7 +23,15 @@ public class Bullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Instantiate(particlePrefab, transform.position, transform.rotation);
+        if (collision.collider.CompareTag("Enemy") || collision.collider.CompareTag("Player"))
+        {
+            Instantiate(bloodSplash, transform.position, transform.rotation);
+        }
+        else
+        {
+            Instantiate(particlePrefab, transform.position, transform.rotation);
+        }
         Destroy(gameObject);
     }
+
 }

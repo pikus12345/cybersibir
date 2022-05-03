@@ -73,5 +73,10 @@ public class DedEnemy : MonoBehaviour
         animator.SetInteger("Animation", 3);
         Destroy(GetComponent<Collider2D>());
         Destroy(GetComponent<Rigidbody2D>());
+        BossHP bossHP = FindObjectOfType<BossHP>();
+        if(bossHP != null)
+        {
+            bossHP.bolvanchiks.Remove(gameObject);
+        }
     }
 }

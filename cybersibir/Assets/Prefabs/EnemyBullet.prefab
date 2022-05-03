@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2000
   particlePrefab: {fileID: 8919505392809473748, guid: a5328d6c1e975734c95afeaacef2bcde, type: 3}
+  bloodSplash: {fileID: 8360868011448224345, guid: c506e42b27ee6884db66bf105df818eb, type: 3}
   xSource: 0
 --- !u!50 &5238389259391230702
 Rigidbody2D:
