@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af85ee75ef1d1245bd57582e75a2b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3000
+  moveSpeed: 3500
   particlePrefab: {fileID: 8919505392809473748, guid: a5328d6c1e975734c95afeaacef2bcde, type: 3}
   bloodSplash: {fileID: 8360868011448224345, guid: c506e42b27ee6884db66bf105df818eb, type: 3}
   xSource: 0
@@ -164,7 +164,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7279901213645486966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: -0.006, z: 0}
+  m_LocalPosition: {x: -0.53, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5238389259391230608}
@@ -211,7 +211,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.27
+  m_Time: 20
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -220,7 +220,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.09090908
+        value: 0.115902975
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -274,6 +274,6 @@ TrailRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_MinVertexDistance: 0.04
-  m_Autodestruct: 1
+  m_MinVertexDistance: 0
+  m_Autodestruct: 0
   m_Emitting: 1

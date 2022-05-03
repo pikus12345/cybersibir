@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Soldat : MonoBehaviour
+public class Org2 : MonoBehaviour
 {
     Animator animator;
     private bool isLiving = true;
@@ -11,11 +11,11 @@ public class Soldat : MonoBehaviour
     public float viewRadius;
     [SerializeField] private float distToPlayer;
     public float attackDistance;
-    public Transform gun;
     public GameObject bulletPrefab;
     public GameObject bulletParticlesPrefab;
     private float delay;
     public Transform dulo;
+    public float shootDelay;
 
     private void Start()
     {
@@ -45,7 +45,7 @@ public class Soldat : MonoBehaviour
         }
         else
             animator.SetInteger("Animation", 0);
-            //gun.position = transform.position;
+        //gun.position = transform.position;
     }
     private void Go(float hor)
     {
@@ -59,33 +59,20 @@ public class Soldat : MonoBehaviour
     {
         if (collision.collider.CompareTag("Bullet"))
         {
-            Death();
+            animator.SetInteger("Animation", 3);
         }
     }
-   public void Fire()
-   {
-        gun.transform.position = player.position + new Vector3(0, 10, 0);
-        if (delay > 0.5f)
+    public void Fire()
+    {
+        if (delay > shootDelay)
         {
             animator.SetInteger("Animation", 2);
-            GameObject _bull = Instantiate(bulletPrefab, dulo.position + new Vector3(0, 0, -10), dulo.rotation);
+            GameObject _bull = Instantiate(bulletPrefab, dulo.position, dulo.rotation);
             _bull.GetComponent<Bullet>().xSource = dulo.position.x;
             Instantiate(bulletParticlesPrefab, dulo.position, dulo.rotation);
             delay = 0;
         }
         delay += Time.deltaTime;
-        
-   }
-    public void Death()
-    {
-        isLiving = false;
-        animator.SetInteger("Animation", 3);
-        Destroy(GetComponent<Collider2D>());
-        Destroy(GetComponent<Rigidbody2D>());
-        BossHP bossHP = FindObjectOfType<BossHP>();
-        if (bossHP != null)
-        {
-            bossHP.bolvanchiks.Remove(gameObject);
-        }
+
     }
 }
