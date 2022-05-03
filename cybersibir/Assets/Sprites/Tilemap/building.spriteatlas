@@ -68,6 +68,18 @@ SpriteAtlas:
   - {fileID: -2926414249993182927, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
   - {fileID: 5340703965763632610, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
   - {fileID: -5112711567675332642, guid: 448004464bc78bf4797ec9a243a137d3, type: 3}
+  - {fileID: -2756064812499679153, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: -6854085019721290939, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: -6762806206646994688, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: -51499525944834020, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: -8427611950882648537, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: -8241390977823593542, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: 6751644692483293817, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: -825839394117856775, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: 7797188495418973413, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: 6577263064753154255, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: 6271303784374557680, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
+  - {fileID: 8549451902671798977, guid: 5807b178c0e48dc4e93e61bddd86e806, type: 3}
   - {fileID: -3062486835590830950, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -7471712248444111868, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
   - {fileID: -353946654998929424, guid: c2dc87c9840cff440a48a34ce2e5f7c5, type: 3}
@@ -146,6 +158,18 @@ SpriteAtlas:
   - club_11
   - club_10
   - club_12
+  - kitchen_11
+  - kitchen_10
+  - kitchen_0
+  - kitchen_1
+  - kitchen_2
+  - kitchen_3
+  - kitchen_4
+  - kitchen_5
+  - kitchen_6
+  - kitchen_7
+  - kitchen_8
+  - kitchen_9
   - building_8
   - building_9
   - building_6
